@@ -3,21 +3,18 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>Agustín Becerra</h1>
+      <p>Desarrollador Frontend especializado en Angular y React.</p>
+
+      <h2>Experiencia</h2>
+      <ul>
+        <li>Empresa A - Angular Dev</li>
+        <li>Empresa B - Fullstack</li>
+      </ul>
+
+      <h2>Contacto</h2>
+      <p>Email: agustin@example.com</p>
     </div>
   );
 }
