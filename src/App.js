@@ -37,7 +37,7 @@ export default function App() {
     e.preventDefault();
     // Here you would typically send the form data to a server
     console.log("Form submitted:", formData);
-    alert("¡Mensaje enviado! Te contactaré pronto.");
+    alert("Message sent! I will contact you soon.");
     setFormData({ name: "", email: "", message: "" });
   };
 
