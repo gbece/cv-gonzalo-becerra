@@ -7,32 +7,45 @@
 
     .resumeSection {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         max-width: $max-width;
         padding: 1rem 0;
         color: $text-dark;
-        
         margin: 0 auto; 
         width: 100%;        
         text-align: left;
-        
-        border-top: 2px solid $gray-200; // Añadido línea superior entre secciones
-        padding-top: 1rem; // Espacio antes de la línea
+        border-top: 2px solid $gray-200;
+        padding-top: 1rem; 
 
-
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
 
         .titleContainer {
             width: 100px;
+            text-align: center;
+            margin: 0 auto;
+
+            @media (min-width: 768px) {
+                margin: 0;
+                text-align: left;
+            }
 
             .title {
                 font-size: 1.25rem;
                 font-weight: bold;
-                margin-bottom: 3rem;
-                margin-right: 2rem;
+                margin-right: 0;
                 color: #111;
                 position: relative;
                 display: inline-block;
+                text-align: center;
               
+                @media (min-width: 768px) {
+                    margin-bottom: 3rem;
+                    margin-right: 2rem;
+                    text-align: left;
+                }
+
                 &::after {
                     content: '';
                     display: block;
@@ -40,21 +53,32 @@
                     width: 100%;
                     height: 2px;
                     background-color: $primary-orange;
+
+                    @media (min-width: 768px) {
+                        margin: 0;
+                    }
                 }
-              }
+            }
         }
         
         
         .resumeGrid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             gap: 1.5rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding-top: 2.5rem;
+            padding-top: 1rem;
+            text-align: left;
             
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                padding-top: 2.5rem;
+                margin: 0;
+            }
 
             .resumeItem {
+                text-align: left;
                 h4 {
                     font-size: 1.1rem;
                     font-weight: bold;

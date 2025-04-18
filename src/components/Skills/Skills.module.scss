@@ -7,20 +7,30 @@
 
   .skillsContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: $max-width;
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 100%;
+    text-align: left;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 
     .titleContainer {
       width: 100px;
+      text-align: center;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+          margin: 0;
+          text-align: left;
+      }
 
       
       .title {
         font-size: 1.25rem;
         font-weight: bold;
-        margin-bottom: 3rem;
-        //margin-right: 2rem;
         color: #111;
         position: relative;
         display: inline-block;
@@ -43,13 +53,18 @@
     
     .skillsGrid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 1.5rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: left;
       width: 100%;
-      padding-top: 2.5rem;
+      padding-top: 1rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 2.5rem;
+      }
 
       
       .skillGroup {
