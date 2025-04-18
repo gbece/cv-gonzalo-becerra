@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+
+.contact {
+    background-color: $background-dark;
+    color: $text-primary;
+    padding: 6rem 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: $max-width;
+    margin: 2rem auto 0;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: $text-secondary;
+        color: $black;
+
+        &:focus {
+        outline: 2px solid $accent;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        padding: 0.75rem 1.5rem;
+        background-color: $accent;
+        color: $black;
+        font-weight: 600;
+        border: none;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+        background-color: $accent-hover;
+        }
+    }
+}
+
+.info {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $text-secondary;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+        color: $accent;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        }
+
+        li strong {
+        color: $accent;
+        }
+    }
+}

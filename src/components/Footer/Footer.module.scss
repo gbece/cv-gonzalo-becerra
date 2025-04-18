@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.footer {
+    background-color: darken($background-dark, 5%);
+    color: $text-secondary;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    a {
+        color: $accent;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+}
+
+.copy {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}

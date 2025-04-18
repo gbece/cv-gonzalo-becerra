@@ -1,0 +1,72 @@
+@import "../../styles/variables";
+
+.about {
+  background-color: $background-dark;
+  color: $text-primary;
+  padding: 6rem 2rem;
+  font-family: $font-main;
+
+    .container {
+        max-width: $max-width;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    .imageWrapper {
+        flex-shrink: 0;
+        width: 13rem;
+        
+        img {
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 8rem;
+            height: 8rem;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        flex: 1;
+        max-width: 750px;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: $text-secondary;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            font-size: 0.95rem;
+            list-style-type: none; 
+            padding-left: 0; 
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    }
+}
